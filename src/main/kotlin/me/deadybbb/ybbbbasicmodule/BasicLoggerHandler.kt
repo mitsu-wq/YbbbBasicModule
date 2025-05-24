@@ -3,7 +3,7 @@ package me.deadybbb.ybbbbasicmodule
 import org.bukkit.plugin.java.JavaPlugin
 import java.util.logging.Logger
 
-class BasicLoggerHandler(
+open class BasicLoggerHandler(
     plugin: JavaPlugin
 ) {
     val logger = plugin.logger

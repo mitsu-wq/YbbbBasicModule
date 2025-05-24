@@ -5,7 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin
 import java.io.File
 import java.io.IOException
 
-class BasicConfigHandler (
+open class BasicConfigHandler (
     val plugin: JavaPlugin,
     val configFileName: String
 ) {

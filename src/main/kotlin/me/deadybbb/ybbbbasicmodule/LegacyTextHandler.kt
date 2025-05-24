@@ -6,7 +6,7 @@ import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer
 import org.bukkit.command.CommandSender
 import java.util.regex.Pattern
 
-class LegacyTextHandler {
+open class LegacyTextHandler {
     companion object {
         private val LEGACY_PATTERN: Pattern = Pattern.compile("&[0-9a-fk-or]")
 
