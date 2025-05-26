@@ -22,6 +22,11 @@ open class LegacyTextHandler {
 
         @JvmStatic
         fun sendFormattedMessage(sender: CommandSender, text: String) {
+            sender.sendMessage(parseText(text))
+        }
+
+        @JvmStatic
+        fun sendFormattedMessage(sender: CommandSender, text: Component) {
             sender.sendMessage(text)
         }
     }
