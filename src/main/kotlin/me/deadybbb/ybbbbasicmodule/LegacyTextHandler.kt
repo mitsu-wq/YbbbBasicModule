@@ -12,11 +12,12 @@ open class LegacyTextHandler {
         private val LEGACY_PATTERN = Pattern.compile("&[0-9a-fk-or]")
         private val MINI_MESSAGE = MiniMessage.miniMessage()
         private val PLAIN_TEXT_SERIALIZER = PlainTextComponentSerializer.plainText()
+        private val LEGACY_TEXT_SERIALIZER = LegacyComponentSerializer.legacyAmpersand()
 
         @JvmStatic
         fun parseText(text: String): Component {
             val msg = if (LEGACY_PATTERN.matcher(text).find()) {
-                LegacyComponentSerializer.legacyAmpersand().deserialize(text)
+                LEGACY_TEXT_SERIALIZER.deserialize(text)
             } else {
                 MINI_MESSAGE.deserialize(text)
             }
